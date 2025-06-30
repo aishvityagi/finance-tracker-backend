@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "addb127a-56f4-4f2b-9c0e-b21e8412ac67",
+		"name": "finance tracker api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46030939",
+		"_collection_link": "https://aishvityagi.postman.co/workspace/Aishvi-Tyagi's-Workspace~5ebaa7d3-befa-4e5a-83fe-f30035212856/collection/46030939-addb127a-56f4-4f2b-9c0e-b21e8412ac67?action=share&source=collection_link&creator=46030939"
+	},
+	"item": [
+		{
+			"name": "/api/transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYxOGNjNWVhZDgzYjdjMDQ3ZmFkOTAiLCJpYXQiOjE3NTEyOTkzNzAsImV4cCI6MTc1MTMwMjk3MH0.Yg27a_NcEM8APNkGza4XDjViaxD2dg8FgtuUwjMQ67o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/summary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYxOGNjNWVhZDgzYjdjMDQ3ZmFkOTAiLCJpYXQiOjE3NTEyOTkzNzAsImV4cCI6MTc1MTMwMjk3MH0.Yg27a_NcEM8APNkGza4XDjViaxD2dg8FgtuUwjMQ67o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/summary?month=6&year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "6"
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"aishvi@example.com\",\r\n  \"password\": \"securepass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"aishvi\",\r\n  \"email\": \"aishvi@example.com\",\r\n  \"password\": \"securepass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/transactions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYxOGNjNWVhZDgzYjdjMDQ3ZmFkOTAiLCJpYXQiOjE3NTEyOTkzNzAsImV4cCI6MTc1MTMwMjk3MH0.Yg27a_NcEM8APNkGza4XDjViaxD2dg8FgtuUwjMQ67o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1200,\r\n  \"type\": \"Income\",\r\n  \"category\": \"Freelance\",\r\n  \"description\": \"June freelance project\",\r\n  \"date\": \"2025-06-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/transactions/6862bc5ebaef67bd003bf821",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYxOGNjNWVhZDgzYjdjMDQ3ZmFkOTAiLCJpYXQiOjE3NTEyOTkzNzAsImV4cCI6MTc1MTMwMjk3MH0.Yg27a_NcEM8APNkGza4XDjViaxD2dg8FgtuUwjMQ67o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1350,\r\n  \"description\": \"Updated freelance payment\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/transactions/6862bc5ebaef67bd003bf821",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"6862bc5ebaef67bd003bf821"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/transactions/6862bc5ebaef67bd003bf821",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYxOGNjNWVhZDgzYjdjMDQ3ZmFkOTAiLCJpYXQiOjE3NTEyOTkzNzAsImV4cCI6MTc1MTMwMjk3MH0.Yg27a_NcEM8APNkGza4XDjViaxD2dg8FgtuUwjMQ67o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api/transactions/6862bc5ebaef67bd003bf821",
+					"host": [
+						"api"
+					],
+					"path": [
+						"transactions",
+						"6862bc5ebaef67bd003bf821"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
